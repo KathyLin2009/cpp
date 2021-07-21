@@ -1,4 +1,5 @@
 #include <iostream> 
+#include <string> 
 using namespace std;
 
 void adding()
@@ -18,10 +19,27 @@ void adding()
     {
         answer = num1 * 3;
     }
-    cout << "The answer is: " << answer;
+    cout << "The answer is: " << answer << endl;
+}
+
+string AddIf(string str)
+{
+    if(str[0] == 'i' && str[1] == 'f')
+    {
+        return str;
+    }
+    else
+    {
+        return str.insert(0, "if");
+    }
 }
 
 int main()
 {
     adding();
+
+    string str;
+    cout << "Type in a string: " << endl;
+    cin >> str;
+    cout << AddIf(str);
 }
